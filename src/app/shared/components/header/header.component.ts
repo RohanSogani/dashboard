@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,15 @@ import { EventEmitter } from 'protractor';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter;
   
   constructor() { }
 
   ngOnInit() {
   }
 
-  
+  toggleSideBar() {
+    this.toggleSideBarForMe.emit();
+  }
 
 }
