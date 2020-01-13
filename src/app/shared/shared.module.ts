@@ -6,13 +6,17 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
 import { FlexLayoutModule} from '@angular/flex-layout'
 import { RouterModule } from '@angular/router';
+import { FormComponent } from './widgets/form/form.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
@@ -23,12 +27,19 @@ import { RouterModule } from '@angular/router';
     FlexLayoutModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent  
+    SidebarComponent,
+    FormComponent,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

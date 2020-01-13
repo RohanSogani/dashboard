@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group1">
+        <label for="numberOfNodes">Nodes</label>
+        <input required min="4" ngModel name="numberOfNodes" #numberOfNodes="ngModel" (change)="log(numberOfNodes)" id="numberOfNodes" type="number" class="form-group1">
+        <div class="alert alert-danger" *ngIf="numberOfNodes.touched && !numberOfNodes.valid" >
+            <div *ngIf="numberOfNodes.errors.requires">Number of Nodes is required</div>
+            <div *ngIf="numberOfNodes.errors.min">Number of Nodes should at least 4</div>
+        </div>
+        <div></div>
+        <label for="numberOfClients">Clients</label>
+        <input required ngModel name="numberOfClients" #numberOfClients="ngModel" (change)="log(numberOfClients)" id="numberOfClients" type="number" class="form-group1">
+        <div class="alert alert-danger" *ngIf="numberOfClients.touched && !numberOfClients.valid">Number of Clients is required</div>
+        <div></div>
+        <label for="batchSize">Batch Size</label>
+        <input required ngModel name="batchSize" #batchSize="ngModel" (change)="log(batchSize)" id="batchSize" type="number" class="form-group1">
+        <div class="alert alert-danger" *ngIf="batchSize.touched && !batchSize.valid">Batch Size is required</div>
+    </div>
+    <button class="btn btn-primary">Run</button>
+</form>

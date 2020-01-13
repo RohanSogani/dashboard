@@ -6,6 +6,8 @@ import { MatSidenavModule, MatDividerModule} from '@angular/material'
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { PostsComponent } from 'src/app/modules/posts/posts.component';
     RouterModule,
     SharedModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DefaultModule { }
