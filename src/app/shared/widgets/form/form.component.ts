@@ -15,4 +15,8 @@ export class FormComponent implements OnInit {
   log(x) {
     console.log(x); 
   }
+
+  runEvent(event) {
+    console.log("Run Clicked");
+  }
 }
